@@ -21,6 +21,13 @@ public class Produit {
         this.prix = prix;
         this.quantite = quantite;
     }
+    
+    public Produit() {
+        id=0;
+        libelle="";
+        prix=0;
+        quantite=0;
+    }
 
     /**
      * @return the id
@@ -77,6 +84,12 @@ public class Produit {
     public void setQuantite(int quantite) {
         this.quantite = quantite;
     }
-    
-    
+
+    public void afficher() 
+	{
+		System.out.println("Identifiant : " + id);
+		System.out.println("Libelle : " + libelle);
+		System.out.println("Prix    : " + prix);
+		System.out.println("Stock    : "+ quantite+"\n");
+	}
 }

@@ -34,6 +34,12 @@ public class Produit_SGBD
         ResultSet res;
         String query;
         Produit p;
+        int leId;
+	String leLib;
+	float lePrix;
+	int leStock;	
+	int i;
+        ArrayList<Produit> lesProds;
         
         int choix=1;
         while(choix!=0)
@@ -50,48 +56,43 @@ public class Produit_SGBD
                 switch(choix)
                 {
                     case 1:
-                        // 4) Creation de la requete
-                        res=st.executeQuery("select * from produit");
-                        // 5) Parcours des données
-                        int i=1;
-                        while (res.next())
-                        {
-                            System.out.println("Produit "+i+"\nLibelle : "+res.getString(2)+"\nPrix : "+res.getString(3)+"\nQuantité : "+res.getString(4));
-                            System.out.println("-------------------------");
-                            i++;
-                        }
+                        lesProds = PasserelleBdd.lireProd();
+                                i=0;
+                                while (i<lesProds.size())
+                                {
+                                    p=lesProds.get(i);
+                                    p.afficher();
+                                    i = i + 1;
+                                }
                         break;
 
                     case 2:
-                        System.out.print("Saisir le libellé : ");
-                        String lib=input.next();
-                        System.out.print("Saisir le prix : ");
-                        double prix=input.nextDouble();
-                        System.out.print("Saisir la quantité : ");
-                        int qte=input.nextInt();
-                        query="insert into produit (libelle,prix,quantite) values('"+lib+"','"+prix+"','"+qte+"')";
-                        st.executeUpdate(query);
+                        System.out.print("\nEntrez les informations : \n");
+                        System.out.print("Identifiant : ");
+                        leId = input.nextInt();			
+                        System.out.print("Libelle : ");
+                        leLib = input.next();
+                        System.out.print("Prix    : ");
+                        lePrix = input.nextFloat();
+                        System.out.print("Stock    : ");
+                        leStock = input.nextInt();
+
+                        p = new Produit(leId, leLib, lePrix, leStock);
+
+                        PasserelleBdd.modifProd('A', p);
                         break;
 
                     case 3:
-                        System.out.print("Nombre de produits : ");
-                        res=st.executeQuery("select sum(quantite) from produit");
-                        res.next();
-                        if(res.getInt(1)==0)
-                        {
-                            System.out.println("Aucun produits dans l'entrepot");
-                        }
-                        else
-                        {
-                            System.out.println(res.getInt(1));
-                        }
+    
                         break;
                     
                     case 4:
-                        query="delete from produit";
-                        st.executeUpdate(query);
-                        System.out.println("Produits supprimés !");
+//                        query="delete from produit";
+//                        st.executeUpdate(query);
+//                        System.out.println("Produits supprimés !");
                         break;
+                        
+                    case 5:
                 }
             }
             catch (SQLException e)
