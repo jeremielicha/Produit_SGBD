@@ -46,8 +46,6 @@ public class Produit_SGBD
         {
             System.out.println("1 : Afficher les produits");
             System.out.println("2 : Inserer un produit");
-            System.out.println("3 : Compter le nombre de produits en tout");
-            System.out.println("4 : Supprimer tout les produits");
             System.out.println("0 : Arreter le programme");
             
             choix=input.nextInt();
