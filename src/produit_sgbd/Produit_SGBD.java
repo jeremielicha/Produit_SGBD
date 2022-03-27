@@ -25,12 +25,12 @@ public class Produit_SGBD
         Scanner input=new Scanner(System.in);
         ArrayList<Produit> mesProduits=new ArrayList();
         
-        // 1) Charger le driver mysql
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        // 2) Creer la connection
-        Connection con=DriverManager.getConnection("jdbc:mysql://localhost/entrepot", "root", "");
-        // 3) Creer un etat de connection
-        Statement st=con.createStatement();
+//        // 1) Charger le driver mysql
+//        Class.forName("com.mysql.cj.jdbc.Driver");
+//        // 2) Creer la connection
+//        Connection con=DriverManager.getConnection("jdbc:mysql://localhost/entrepot", "root", "");
+//        // 3) Creer un etat de connection
+//        Statement st=con.createStatement();
         ResultSet res;
         String query;
         Produit p;
