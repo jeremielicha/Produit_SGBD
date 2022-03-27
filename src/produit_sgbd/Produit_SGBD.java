@@ -87,9 +87,7 @@ public class Produit_SGBD
                         break;
                     
                     case 4:
-//                        query="delete from produit";
-//                        st.executeUpdate(query);
-//                        System.out.println("Produits supprimés !");
+
                         break;
                         
                     case 5:
