@@ -31,6 +31,7 @@ public class Produit_SGBD
 //        Connection con=DriverManager.getConnection("jdbc:mysql://localhost/entrepot", "root", "");
 //        // 3) Creer un etat de connection
 //        Statement st=con.createStatement();
+
         ResultSet res;
         String query;
         Produit p;
