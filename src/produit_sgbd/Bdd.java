@@ -33,7 +33,7 @@ class Bdd
     	try
         {
 			// Chargement des drivers SQL
-			Class.forName ("org.gjt.mm.mysql.Driver").newInstance();
+			Class.forName ("com.mysql.cj.jdbc.Driver").newInstance();
 		}
 		catch (ClassNotFoundException a)
 		{
