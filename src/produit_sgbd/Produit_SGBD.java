@@ -32,8 +32,6 @@ public class Produit_SGBD
 //        // 3) Creer un etat de connection
 //        Statement st=con.createStatement();
 
-        ResultSet res;
-        String query;
         Produit p;
         int leId;
 	String leLib;

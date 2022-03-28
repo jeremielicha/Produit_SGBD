@@ -28,7 +28,7 @@ public class PasserelleBdd
                 	
 		unProd = new Produit();
                 lesProds = new ArrayList<>();
-                              
+
 		// Définition de la requête          
 		requete = "select * from produit;";
 	
