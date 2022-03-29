@@ -115,28 +115,28 @@ public class PasserelleBdd
 	// - Prodfuit à ajouter : Produit P
 	// Valeur retournée : 1 si modification effectuée, 0 sinon
 
-    public static int ajouterProd(Produit P) throws SQLException
-    {		
-            String requete = null;
-            int res;
-            int unId;
-            String unLib;
-            double unPrix;
-            int unStk;
-
-            unId=P.getId();
-            unLib=P.getLibelle();
-            unPrix=P.getPrix();
-            unStk=P.getQuantite();
-
-            requete = "INSERT INTO produit(id, lib, pu, qte)VALUES("+unId+",'"+unLib+"',"+unPrix+","+unStk+")";
-
-            Bdd laBdd = new Bdd();		
-            res = laBdd.exec(requete);
-            return res;
-    }
+	public static int ajouterProd(Produit P) throws SQLException
+	{		
+		String requete = null;
+		int res;
+                int unId;
+		String unLib;
+                float unPrix;
+		int unStk;
+               	
+		unId=P.getId();
+		unLib=P.getLib();
+                unPrix=P.getPrix();
+		unStk=P.getStock();
+		
+                requete = "INSERT INTO produit(id, libelle, prix, quantite)VALUES("+unId+",'"+unLib+"',"+unPrix+","+unStk+")";	
+		
+		Bdd laBdd = new Bdd();		
+		res = laBdd.exec(requete);		
+		return res;
+	}
 	
-    public static int modifierProd(Produit P) throws SQLException
+	public static int modifierProd(Produit P) throws SQLException
     {
         String requete = null;
         int res;
@@ -146,11 +146,11 @@ public class PasserelleBdd
         int unStk;
 
         unId=P.getId();
-        unLib=P.getLibelle();
+        unLib=P.getLib();
         unPrix=P.getPrix();
-        unStk=P.getQuantite();
+        unStk=P.getStock();
 
-        requete = "UPDATE produit SET lib = '"+unLib+"',pu = "+unPrix+",qte = "+unStk+ " WHERE id = "+unId+";";
+        requete = "UPDATE produit SET libelle = '"+unLib+"',prix = "+unPrix+",quantite = "+unStk+ " WHERE id = "+unId+";";
 
         Bdd laBdd = new Bdd();
         res = laBdd.exec(requete);

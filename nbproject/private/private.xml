@@ -5,8 +5,9 @@
         <group>
             <file>file:/D:/Documents/GitHub/Produit_SGBD/src/produit_sgbd/PasserelleBdd.java</file>
             <file>file:/D:/Documents/GitHub/Produit_SGBD/src/produit_sgbd/Bdd.java</file>
-            <file>file:/D:/Documents/GitHub/Produit_SGBD/src/produit_sgbd/Produit_SGBD.java</file>
             <file>file:/D:/Documents/GitHub/Produit_SGBD/src/produit_sgbd/Produit.java</file>
+            <file>file:/D:/Documents/GitHub/Produit_SGBD/src/produit_sgbd/Cons.java</file>
+            <file>file:/D:/Documents/GitHub/Produit_SGBD/src/produit_sgbd/UseProduit.java</file>
         </group>
     </open-files>
 </project-private>
