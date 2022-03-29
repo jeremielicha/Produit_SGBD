@@ -5,7 +5,7 @@ package produit_sgbd;
  *
  *
  * @author 
- * @version 1.00 2015/03/09
+ * @version 1.00 2022/03/22
  */
 
 import java.sql.Connection;
@@ -24,7 +24,6 @@ class Bdd
 	{
 		 connection = null;
 		 nom="entrepot";
-			
 	}
 
 	// Connexion � la base de donnees
@@ -50,7 +49,7 @@ class Bdd
 			connection = DriverManager.getConnection ("jdbc:mysql://localhost/"+nom, "root", "");
 		}
 		catch (SQLException c)
-		{	
+		{
 			System.out.println ("Connexion refusee ou base inconnue");
 		}
 		catch (Exception d)
@@ -103,11 +102,11 @@ class Bdd
 	}
 	
 
-	// M�thode modif
-	// Param�tre : requ�te de modification (Insert, Update ou Delete)
-	// Valeur retourn�e : 1 si modification effectu�e, 0 sinon
+	// Méthode exec
+	// Paramètre : requête Insert, Update ou Delete
+	// Valeur retournée : 1 si modification effectuée, 0 sinon
 	
-	public int modif(String requete) throws SQLException
+	public int exec(String requete) throws SQLException
 	{
 		Connection cnx;
 		int res;

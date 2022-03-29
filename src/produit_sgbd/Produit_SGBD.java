@@ -66,7 +66,7 @@ public class Produit_SGBD
                     case 2:
                         System.out.print("\nEntrez les informations : \n");
                         System.out.print("Identifiant : ");
-                        leId = input.nextInt();			
+                        leId = input.nextInt();
                         System.out.print("Libelle : ");
                         leLib = input.next();
                         System.out.print("Prix    : ");
@@ -76,7 +76,7 @@ public class Produit_SGBD
 
                         p = new Produit(leId, leLib, lePrix, leStock);
 
-                        PasserelleBdd.modifProd('A', p);
+                        PasserelleBdd.ajouterProd(p);
                         break;
 
                     case 3:
