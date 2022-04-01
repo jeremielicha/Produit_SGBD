@@ -54,7 +54,7 @@ class Bdd
 		}
 		catch (Exception d)
 		{
-			System.out.println ("Probl�me de connexion");		
+			System.out.println ("Probl�me de connexion");
 		}
 		return connection;
 	}

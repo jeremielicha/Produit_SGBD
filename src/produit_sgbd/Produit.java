@@ -10,7 +10,6 @@ package produit_sgbd;
 
 
 
-import java.io.*;
 
 public class Produit {
 

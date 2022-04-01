@@ -8,7 +8,6 @@ package produit_sgbd;
  * @version 1.00 2015/03/09
  */
 
-import java.io.*;
 import java.util.*;
 
 public class UseProduit {
@@ -69,7 +68,7 @@ static public void main(String[] arg)throws Exception
                                 while (i<lesProds.size())
                                 {
                                     leProd=lesProds.get(i);
-                                    leProd.afficher();                                
+                                    leProd.afficher();
                                     i = i + 1;
                                 }
 				
@@ -91,26 +90,26 @@ static public void main(String[] arg)throws Exception
 				break;
                            
 
-			/*case '4' :
-                System.out.print("\nEntrez les informations du produit à modifier :\n");
-                System.out.print("Identifiant:");
-                leId = Cons.saisirEntier();
-                System.out.print("nouveau libellé : ");
-                leLib = Cons.saisirChaine();
-                System.out.print("Nouveau prix : ");
-                lePrix = Cons.saisirReel();
-                System.out.print("Nouveau stock : ");
-                leStock = Cons.saisirEntier();
-                leProd = new Produit(leId, leLib, lePrix, leStock);
-                result = PasserelleBdd.modifierProd(leProd);
-
-                if (result == 1){
-                System.out.print("\n le produit est modifié\n");
-                                }
-                else{
-                System.out.print("\nle produit n'est pas modifié\n");
-                                }
-            break;*/
+//			case '4' :
+//                                    System.out.print("\nEntrez les informations du produit à modifier :\n");
+//                                    System.out.print("Identifiant:");
+//                                    leId = Cons.saisirEntier();
+//                                    System.out.print("nouveau libellé : ");
+//                                    leLib = Cons.saisirChaine();
+//                                    System.out.print("Nouveau prix : ");
+//                                    lePrix = Cons.saisirReel();
+//                                    System.out.print("Nouveau stock : ");
+//                                    leStock = Cons.saisirEntier();
+//                                    leProd = new Produit(leId, leLib, lePrix, leStock);
+//                                    result = PasserelleBdd.modifierProd(leProd);
+//
+//                                    if (result == 1){
+//                                    System.out.print("\n le produit est modifié\n");
+//                                                    }
+//                                    else{
+//                                    System.out.print("\nle produit n'est pas modifié\n");
+//                                        }
+//                                break;
 		}
 	}
 }

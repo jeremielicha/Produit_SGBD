@@ -17,7 +17,7 @@ public class Cons {
 		texte = entree.readLine();
 		x = new Integer(texte);
 		
-		return(x.intValue());		
+		return(x);		
 	} 
 
 	public	static float saisirReel() throws IOException{
@@ -31,7 +31,7 @@ public class Cons {
 		texte = entree.readLine();
 		x = new Float(texte);
 		
-		return(x.floatValue());	
+		return(x);	
 	}
 
 	public	static String saisirChaine() throws IOException{
